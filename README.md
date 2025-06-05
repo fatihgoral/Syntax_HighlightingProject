@@ -160,6 +160,7 @@ Açıklama: Şekil 3 – Kullanıcı dostu grafik arayüz.
    ```bash
   cd syntax-highlighter
 
+
 3. Uygulamayı çalıştırın:
    ```bash
    python main.py
