@@ -21,24 +21,57 @@ Aynı zamanda eğitimde algoritmik düşünme becerilerinin geliştirilmesine ka
 
 ### 1. Dil ve Gramer Yapısı
 
-C dilinin temel yapıları analiz edilir:
+Uygulama, **C programlama dilinin temel yapılarını** analiz ederek sözdizimi vurgulama ve doğrulama işlemlerini gerçekleştirir.  
+Analiz edilen temel unsurlar şunlardır:
 
-- Anahtar kelimeler: `int`, `if`, `else`
-- Fonksiyonlar: `printf`
-- Operatörler: `+`, `=`, `>=`
+---
 
-Gramer kuralları, ifade (statement) odaklıdır:  
-Örneğin: `Statement → if (Expression) BlockOrStatement`
+#### 🟪 Anahtar Kelimeler
+
+C dilinde tanımlı temel kontrol ve veri tipi anahtar kelimeleri tanınır.
+
+- **Değişken tanımları:** `int`, `float`, `char`, `double`  
+- **Kontrol yapıları:** `if`, `else`, `for`, `while`, , `return`  
+- **Diğer:** `void`, `static`, `const`
+
+---
+
+#### 📚 Fonksiyonlar
+
+Standart C kütüphane fonksiyonları ve kullanıcı tanımlı fonksiyonlar desteklenir.
+
+- Giriş/çıkış: `printf`, `scanf`, `getchar`, `putchar`  
+- Program başlangıcı: `main`
+
+---
+
+#### ➕ Operatörler
+
+Aritmetik, ilişkisel, mantıksal ve atama operatörleri tanınır.
+
+- **Aritmetik:** `+`, `-`, `*`, `/`, `%`  
+- **İlişkisel:** `==`, `!=`, `>`, `<`, `>=`, `<=`  
+- **Mantıksal:** `&&`, `||`, `!`  
+- **Atama:** `=`, `+=`, `-=`
+
+---
+
+#### 🧱 Semboller ve Yapılar
+
+C diline özgü yapısal unsurlar doğru bir şekilde ayrıştırılır:
+
+- **Parantezler:** `()`, `{}`, `[]`  
+- **Noktalı virgül:** `;`  
+- **Yorum satırları:** `//`, `/* */`
+#### 📐 Gramer Kuralları
+
+Uygulamada kullanılan gramer kuralları, **ifade temelli (statement-oriented)** bir yapıya sahiptir.
 
 🛠️ Uygulama Python + Tkinter ile geliştirilmiştir.
 
 ### 📷 Görsel 1 – Örnek Kod Analizi  
 ![Görsel 1](screenshots/main.png)
-**Tür:** C kod örneği ekran görüntüsü  
-**Açıklama:** Şekil 1 – Analiz edilen örnek C kodu.  
-`int x = 10; if (x > 5) { printf("Geçti\n"); }`
 
----
 
 ### 2. Teknik Altyapı
 
@@ -46,36 +79,63 @@ Gramer kuralları, ifade (statement) odaklıdır:
 
 - `tokenize()` fonksiyonu, regex ile parçalama yapar.  
 Örnek: `int x = 10;` → `int (keyword)`, `x (identifier)`, `= (operator)`
-
 #### 🔹 Sözdizimi Kontrolü
 
-- Recursive descent parser ile C diline özgü gramer kontrolü yapılır.
-- Geçerli yapılar `valid_syntax` ile yeşil renkte işaretlenir.
+**Yöntem:**  
+C programlama diline özgü gramer kurallarını doğrulamak için **recursive descent parser** (özyinelemeli iniş ayrıştırıcısı) kullanılır.  
+Bu yöntem, `if`, `for`, `while` gibi yapılarla birlikte değişken tanımlamaları ve fonksiyon çağrılarını **hiyerarşik bir şekilde analiz eder**.
 
-#### 🔹 Hatalı/Geçersiz İfade Algılama
+**İşleyiş:**  
+Kod, sözdizimsel olarak doğru ifadeler için taranır. Geçerli yapılar, `valid_syntax` fonksiyonu tarafından onaylanır ve kullanıcı arayüzünde **yeşil renkle** (`#00ff00`) görsel olarak işaretlenir.  
+Bu, kullanıcıya kodun doğruluğunu **anında bildirir.**
 
-- Tanımsız, geçersiz veya gramer dışı bir ifade girildiğinde örneğin:
-  ```c
-  $$ x = 5;
-  #a = 9;
-u ifadeler geçersiz kabul edilir ve kırmızı renkle (#ff0000) vurgulanır.
+---
 
-Kullanıcı, hatalı yazımı anında fark eder.
+**Avantajlar:**
+
+- ⚡ Gerçek zamanlı analiz, kod yazımı sırasında hızlı geri bildirim sağlar.  
+- 🔄 Karmaşık ifadeler (örneğin iç içe geçmiş döngüler veya koşullar) doğru şekilde çözümlenir.  
+- 🚀 Performans optimizasyonu sayesinde, büyük kod bloklarında bile akıcı bir deneyim sunar.
+
 
 ### 📷 Görsel 2 – Geçersiz İfade Vurgulama  
 ![Görsel 2](screenshots/invalid.png)
-Açıklama: Şekil 2 – $, # gibi tanımsız sembollerin kırmızı renkle işaretlenmesi.
+.
 
-3. Kullanıcı Arayüzü (GUI)
-Tkinter ile geliştirilen kullanıcı arayüzü şunları içerir:
+### 3. Kullanıcı Arayüzü (GUI)
 
-Kod yazma alanı (Courier New, 13pt, koyu tema)
+Tkinter ile geliştirilen grafiksel arayüz, kullanıcı odaklı bir deneyim sunar:
 
-Gri arka planlı satır numaraları
+---
 
-Kaydırma çubuğu ile senkronize gezinme
+#### 🖊️ Kod Yazma Alanı
 
-<KeyRelease> eventi ile her tuş vuruşunda analiz ve renklendirme
+- Yazı tipi: **Courier New**, 13pt  
+- Tema: **Koyu tema** (okunabilirlik için optimize edilmiş)  
+- Gerçek zamanlı vurgulama: Her tuş vuruşunda (`<KeyRelease>` eventi) analiz ve renklendirme yapılır.
+
+---
+
+#### 🔢 Satır Numaraları
+
+- Gri arka planlı satır numaraları, kodun okunabilirliğini artırır.  
+- Kod alanıyla senkronize çalışır.
+
+---
+
+#### ↕️ Kaydırma Çubuğu
+
+- Uzun kodlarda kolay gezinme sağlar.  
+- Satır numaraları ve kod alanıyla tam uyumludur.
+
+---
+
+#### 👨‍💻 Kullanıcı Deneyimi
+
+- Sezgisel tasarım, hem yeni başlayanlar hem de deneyimli geliştiriciler için uygundur.  
+- Hızlı tepki süresi ile akıcı bir yazma deneyimi sunar.
+
+
 
 ### 📷 Görsel 3 – Kullanıcı Arayüzü  
 ![Görsel 3](screenshots/gui.png)
@@ -86,33 +146,39 @@ Python 3.x
 
 Tkinter (Python ile birlikte gelir)
 
-⚙️ Kurulum
-Projeyi klonlayın:
-git clone https://github.com/kullaniciadi/projeadi.git
-Dizinine gidin:
-cd projeadi
-Uygulamayı çalıştırın:
-python main.py
- Kullanım
-Uygulamayı açın ve C dili kodu yazmaya başlayın.
+## 💻 Gereksinimler
 
-Örnek:
+- Python 3.x  
+- Tkinter (Python ile birlikte gelir)
 
-c
-Kopyala
-Düzenle
-int x = 80;
-if (x >= 50) {
-    printf("Geçti\n");
-}
-Her yapı renklendirilir.
+---
 
-Satır numaraları ve kaydırma çubuğu ile kolayca gezinilir.
-📹 Tanıtım Videosu
-🎬 Proje Tanıtım Videosu (YouTube)
+## ⚙️ Kurulum
 
-📝 Medium Yazısı
-📄 Sözdizimi Vurgulayıcı Geliştirme Süreci
+1. Projeyi klonlayın:
+   ```bash
+   git clone https://github.com/kullaniciadi/projeadi.git
+2. Dizinine gidin:
+   ```bash
+   cd projeadi
+3. Uygulamayı çalıştırın:
+   ```bash
+   python main.py
+
+
+## 📹 Tanıtım Videosu
+
+🎬 [Proje Tanıtım Videosu (YouTube)](https://www.youtube.com/watch?v=kj4glbgZY0Y)
+
+---
+
+## 📝 Medium Yazısı
+
+📄 [Gerçek Zamanlı Sözdizimi Vurgulayıcı ile Kodlama Deneyimini Geliştirmek](https://medium.com/@goralfatih2/ger%C3%A7ek-zamanl%C4%B1-s%C3%B6zdizimi-vurgulay%C4%B1c%C4%B1-ile-kodlama-deneyimini-geli%C5%9Ftirmek-49d7705ad1f4)
+
+---
+
 ## 📄 Proje Raporu (PDF)
 
 📥 [Raporu buradan görüntüle](./RAPOR.pdf)
+
