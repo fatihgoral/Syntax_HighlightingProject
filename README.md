@@ -174,8 +174,8 @@ Açıklama: Şekil 3 – Kullanıcı dostu grafik arayüz.
 📄 [Gerçek Zamanlı Sözdizimi Vurgulayıcı ile Kodlama Deneyimini Geliştirmek](https://medium.com/@goralfatih2/ger%C3%A7ek-zamanl%C4%B1-s%C3%B6zdizimi-vurgulay%C4%B1c%C4%B1-ile-kodlama-deneyimini-geli%C5%9Ftirmek-49d7705ad1f4)
 
 ---
-
 ## 📄 Proje Raporu (PDF)
 
-📥 [Raporu buradan görüntüle](./RAPOR.pdf)
+📥 [Raporu buradan görüntüle](./rapor.pdf)
+
 
