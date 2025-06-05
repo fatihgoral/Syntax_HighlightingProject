@@ -158,7 +158,8 @@ Açıklama: Şekil 3 – Kullanıcı dostu grafik arayüz.
 
 2. Dizinine gidin:
    ```bash
-  cd syntax-highlighter
+   cd syntax-highlighter
+
 
 
 3. Uygulamayı çalıştırın:
