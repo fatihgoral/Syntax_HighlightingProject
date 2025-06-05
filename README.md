@@ -25,33 +25,35 @@ Uygulama, **C programlama dilinin temel yapılarını** analiz ederek sözdizimi
 Analiz edilen temel unsurlar şunlardır:
 
 ---
+### 🧩 Anahtar Kelimeler
 
-#### 🟪 Anahtar Kelimeler
+C dilinde tanımlı temel kontrol ve veri tipi anahtar kelimeleri tanınır:
 
-C dilinde tanımlı temel kontrol ve veri tipi anahtar kelimeleri tanınır.
+- **Değişken tanımları:** `int`, `float`, `char`, `double`
+- **Kontrol yapıları:** `if`, `else`, `for`, `while`, `do`, `return`, `switch`, `case`, `break`, `continue`
+- **Diğer:** `void`, `static`, `const`, `typedef`, `struct`, `union`, `enum`, `extern`, `goto`, `sizeof`
 
-- **Değişken tanımları:** `int`, `float`, `char`, `double`  
-- **Kontrol yapıları:** `if`, `else`, `for`, `while`, , `return`  
-- **Diğer:** `void`, `static`, `const`
-
----
-
-#### 📚 Fonksiyonlar
-
-Standart C kütüphane fonksiyonları ve kullanıcı tanımlı fonksiyonlar desteklenir.
-
-- Giriş/çıkış: `printf`, `scanf`, `getchar`, `putchar`  
-- Program başlangıcı: `main`
+> Bu anahtar kelimeler renklendirilir, bazıları gramer açısından da doğrulanır (örneğin `if`, `for`, `return`).
 
 ---
 
-#### ➕ Operatörler
+### 📚 Fonksiyonlar
 
-Aritmetik, ilişkisel, mantıksal ve atama operatörleri tanınır.
+Standart C kütüphane fonksiyonları ve kullanıcı tanımlı fonksiyonlar desteklenir:
 
-- **Aritmetik:** `+`, `-`, `*`, `/`, `%`  
-- **İlişkisel:** `==`, `!=`, `>`, `<`, `>=`, `<=`  
-- **Mantıksal:** `&&`, `||`, `!`  
+- **Giriş/Çıkış:** `printf`, `scanf`, `puts`, `getchar`, `putchar`
+- **Program giriş noktası:** `main`
+
+
+---
+
+### ➕ Operatörler
+
+Aritmetik, ilişkisel, mantıksal ve atama operatörleri renklendirilir:
+
+- **Aritmetik:** `+`, `-`, `*`, `/`, `%`
+- **İlişkisel:** `==`, `!=`, `>`, `<`, `>=`, `<=`
+- **Mantıksal:** `&&`, `||`, `!`
 - **Atama:** `=`, `+=`, `-=`
 
 ---
