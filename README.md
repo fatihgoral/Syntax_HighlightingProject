@@ -154,10 +154,12 @@ Açıklama: Şekil 3 – Kullanıcı dostu grafik arayüz.
 
 1. Projeyi klonlayın:
    ```bash
-   git clone https://github.com/kullaniciadi/projeadi.git
+   https://github.com/fatihcengiz/syntax-highlighter
+
 2. Dizinine gidin:
    ```bash
-   cd projeadi
+  cd syntax-highlighter
+
 3. Uygulamayı çalıştırın:
    ```bash
    python main.py
