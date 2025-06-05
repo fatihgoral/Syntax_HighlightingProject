@@ -32,7 +32,8 @@ Gramer kuralları, ifade (statement) odaklıdır:
 
 🛠️ Uygulama Python + Tkinter ile geliştirilmiştir.
 
-#### 📷 Görsel 1  
+### 📷 Görsel 1 – Örnek Kod Analizi  
+![Görsel 1](screenshots/main.png)
 **Tür:** C kod örneği ekran görüntüsü  
 **Açıklama:** Şekil 1 – Analiz edilen örnek C kodu.  
 `int x = 10; if (x > 5) { printf("Geçti\n"); }`
@@ -61,8 +62,8 @@ u ifadeler geçersiz kabul edilir ve kırmızı renkle (#ff0000) vurgulanır.
 
 Kullanıcı, hatalı yazımı anında fark eder.
 
-📷 Görsel 2
-Tür: Geçersiz ifade algılama ekran görüntüsü
+### 📷 Görsel 2 – Geçersiz İfade Vurgulama  
+![Görsel 2](screenshots/invalid.png)
 Açıklama: Şekil 2 – $, # gibi tanımsız sembollerin kırmızı renkle işaretlenmesi.
 
 3. Kullanıcı Arayüzü (GUI)
@@ -76,8 +77,8 @@ Kaydırma çubuğu ile senkronize gezinme
 
 <KeyRelease> eventi ile her tuş vuruşunda analiz ve renklendirme
 
-📷 Görsel 3
-Tür: GUI ekran görüntüsü
+### 📷 Görsel 3 – Kullanıcı Arayüzü  
+![Görsel 3](screenshots/gui.png)
 Açıklama: Şekil 3 – Kullanıcı dostu grafik arayüz.
 
 💻 Gereksinimler
