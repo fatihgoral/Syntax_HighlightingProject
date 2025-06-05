@@ -143,11 +143,6 @@ Tkinter ile geliştirilen grafiksel arayüz, kullanıcı odaklı bir deneyim sun
 ![Görsel 3](screenshots/gui.png)
 Açıklama: Şekil 3 – Kullanıcı dostu grafik arayüz.
 
-💻 Gereksinimler
-Python 3.x
-
-Tkinter (Python ile birlikte gelir)
-
 ## 💻 Gereksinimler
 
 - Python 3.x  
