@@ -87,10 +87,6 @@ Uygulamada kullanılan gramer kuralları, **ifade temelli (statement-oriented)**
 C programlama diline özgü gramer kurallarını doğrulamak için **recursive descent parser** (özyinelemeli iniş ayrıştırıcısı) kullanılır.  
 Bu yöntem, `if`, `for`, `while` gibi yapılarla birlikte değişken tanımlamaları ve fonksiyon çağrılarını **hiyerarşik bir şekilde analiz eder**.
 
-**İşleyiş:**  
-Kod, sözdizimsel olarak doğru ifadeler için taranır. Geçerli yapılar, `valid_syntax` fonksiyonu tarafından onaylanır ve kullanıcı arayüzünde **yeşil renkle** (`#00ff00`) görsel olarak işaretlenir.  
-Bu, kullanıcıya kodun doğruluğunu **anında bildirir.**
-
 ---
 
 **Avantajlar:**
@@ -154,11 +150,12 @@ Açıklama: Şekil 3 – Kullanıcı dostu grafik arayüz.
 
 1. Projeyi klonlayın:
    ```bash
-   https://github.com/fatihcengiz/syntax-highlighter
+   git clone https://github.com/fatihgoral/Syntax_HighlightingProject.git
+
 
 2. Dizinine gidin:
    ```bash
-   cd syntax-highlighter
+   cd Syntax_HighlightingProject
 
 
 
